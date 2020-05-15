@@ -30,4 +30,4 @@ jobs:
       run: dotnet pack Magic.sln --no-build -c Release -o ./artifacts
 
     - name: Deploy package
-      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate -k ${{secrets.DeployToken}}
+      run: dotnet nuget push **/*.nupkg --skip-duplicate -k ${{secrets.DeployToken}}
