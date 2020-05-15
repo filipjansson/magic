@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IsPackable>true</IsPackable>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <PackageId>Magic.Data</PackageId>
     <Authors>Filip Jansson</Authors>
     <Company>Filip Jansson</Company>
