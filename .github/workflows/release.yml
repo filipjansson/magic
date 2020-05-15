@@ -23,7 +23,7 @@ jobs:
       run: dotnet clean
 
     - name: Build release
-      run: dotnet buld -c Release
+      run: dotnet build -c Release
 
     - name: Package project
       run: dotnet pack src/Magic.csproj --no-build -c Release
