@@ -27,3 +27,6 @@ jobs:
 
     - name: Package project
       run: dotnet pack src/Magic.csproj --no-build -c Release
+
+    - name: Deploy package
+      run: dotnet nuget push ./src/bin/Release/*.nupkg --skip-duplicate
