@@ -4,9 +4,10 @@ on:
   release:
     types: [published]
 
-jobs:
-  build:
-
+jobs: 
+  deploy:
+    name: Build and deploy packages
+    
     runs-on: ubuntu-latest
 
     steps:
