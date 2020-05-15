@@ -7,7 +7,7 @@ on:
 jobs: 
   deploy:
     name: Build and deploy packages
-    
+
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
       run: dotnet build -c Release
 
     - name: Package project
-      run: dotnet pack src/Magic.csproj --no-build -c Release
+      run: dotnet pack Magic.sln --no-build -c Release -o ./artifacts
 
     - name: Deploy package
-      run: dotnet nuget push ./src/bin/Release/*.nupkg --skip-duplicate -k ${{secrets.DeployToken}}
+      run: dotnet nuget push ./artifacts/*.nupkg --skip-duplicate -k ${{secrets.DeployToken}}

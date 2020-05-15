@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <Version>2.5.5</Version>
+    <PackageId>Magic.Models</PackageId>
+    <Authors>Filip Jansson</Authors>
+    <Company>Filip Jansson</Company>
+    <PackageDescription>This package is a dummy package to testing deployment</PackageDescription>
+    <RepositoryUrl>https://github.com/filipjansson/magic</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

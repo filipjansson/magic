@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic", "src\Magic.csproj", "{2E7D727F-F564-4E26-95D5-7830C6D5CC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic", "src\Magic\Magic.csproj", "{232984C4-A31F-4203-8548-C8FAE8C6A6DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Models", "src\Magic.Models\Magic.Models.csproj", "{D539E7C0-2BE0-477E-AC91-05E31467D613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2E7D727F-F564-4E26-95D5-7830C6D5CC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E7D727F-F564-4E26-95D5-7830C6D5CC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E7D727F-F564-4E26-95D5-7830C6D5CC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E7D727F-F564-4E26-95D5-7830C6D5CC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232984C4-A31F-4203-8548-C8FAE8C6A6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232984C4-A31F-4203-8548-C8FAE8C6A6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232984C4-A31F-4203-8548-C8FAE8C6A6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232984C4-A31F-4203-8548-C8FAE8C6A6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
