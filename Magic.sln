@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic", "src\Magic\Magic.cs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Models", "src\Magic.Models\Magic.Models.csproj", "{D539E7C0-2BE0-477E-AC91-05E31467D613}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Data", "src\Magic.Data\Magic.Data.csproj", "{E35DA90C-B428-410F-A650-CE96FEF5A795}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D539E7C0-2BE0-477E-AC91-05E31467D613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E35DA90C-B428-410F-A650-CE96FEF5A795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E35DA90C-B428-410F-A650-CE96FEF5A795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E35DA90C-B428-410F-A650-CE96FEF5A795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E35DA90C-B428-410F-A650-CE96FEF5A795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
