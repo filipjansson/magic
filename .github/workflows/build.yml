@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-
+    name: Build and restore
     runs-on: windows-2019
 
     steps:
@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: 10.x
 
-    - name: Install npm and run gulp
+    - name: Setup npm and gulp
     - run: |
         cd src\\Magic
         npm install
