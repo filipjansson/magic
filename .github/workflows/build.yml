@@ -18,10 +18,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
+
+    - name: Install npm and run gulp
     - run: |
-        dir
         cd src\\Magic
         npm install
+        npm audit fix
         gulp
 
     - name: Setup .NET Core
