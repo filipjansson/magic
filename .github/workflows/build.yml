@@ -20,7 +20,7 @@ jobs:
         node-version: 10.x
 
     - name: Setup npm and gulp
-    - run: |
+      run: |
         cd src\\Magic
         npm install
         npm audit fix
