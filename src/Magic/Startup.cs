@@ -33,7 +33,7 @@ namespace src
         public void ConfigureServices(IServiceCollection services)
         {
             // Service setup
-            services.AddPiranha(options =>
+            services.AddPiranha(options
             {
                 options.AddRazorRuntimeCompilation = true;
 
