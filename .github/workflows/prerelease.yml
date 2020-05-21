@@ -2,11 +2,11 @@ name: Release Magic
 
 on:
   release:
-    types: [released]
+    types: [prereleased]
 
 jobs: 
   deploy:
-    name: Build and deploy packages
+    name: Build and deploy prereleased packages 
 
     runs-on: windows-2019
 
@@ -28,6 +28,3 @@ jobs:
 
     - name: Package project
       run: dotnet pack Magic.sln --no-build -c Release -o ./artifacts
-
-    - name: Deploy package
-      run: dotnet nuget push '**/*.nupkg' --skip-duplicate -k ${{secrets.DeployToken}}
