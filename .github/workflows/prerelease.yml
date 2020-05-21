@@ -1,4 +1,4 @@
-name: Release Magic
+name: Prerelease Magic
 
 on:
   release:
