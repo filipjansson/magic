@@ -31,7 +31,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }} 
         source-url: ${{ env.SOURCE_URL }}
       env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        NUGET_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
 
       # Run dotnet build and publish
       - name: dotnet restore and build
@@ -45,4 +45,4 @@ jobs:
 
     # Deploy packages
     - name: Deploy packages
-      run: dotnet nuget push '**/*.nupkg' --skip-duplicate -k ${{secrets.DEPLOY_TOKEN}}
+      run: dotnet nuget push '**/*.nupkg' --skip-duplicate -k ${{ secrets.PACKAGE_TOKEN }}
