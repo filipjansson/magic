@@ -1,33 +1,48 @@
-name: Release Magic
+name: Create and deploy packages
 
-#on:
-#  release:
-#    types: [released]
+on:
+  release:
+    types: [released]
+
+# CONFIGURATION
+#
+# 1. Set up the following secrets in your repository:
+#   GITHUB_TOKEN
+#   DEPLOY_TOKEN
+#
+# 2. Change these variables for your configuration:
+env:
+  SOURCE_URL: https://nuget.pkg.github.com/bybrick/index.json # set this nuget source
+  DOTNET_VERSION: '3.1.300'                                   # set this to the dot net version to use
 
 jobs: 
   deploy:
     name: Build and deploy packages
-
     runs-on: windows-2019
-
     steps:
+
+    # Checkout the repo
     - uses: actions/checkout@v2
+
+    # Setup .NET Core SDK
     - name: Setup .NET Core    
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
-        source-url: https://nuget.pkg.github.com/filipjansson/index.json
+        dotnet-version: ${{ env.DOTNET_VERSION }} 
+        source-url: ${{ env.SOURCE_URL }}
       env:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-    - name: Clean
-      run: dotnet clean
+      # Run dotnet build and publish
+      - name: dotnet restore and build
+        run: |
+          dotnet restore
+          dotnet build --configuration Release
 
-    - name: Build release
-      run: dotnet build -c Release
+    # Create packges
+    - name: Create packages
+      run: dotnet pack --no-build -c Release -o ./artifacts
 
-    - name: Package project
-      run: dotnet pack Magic.sln --no-build -c Release -o ./artifacts
-
-    - name: Deploy package
-      run: dotnet nuget push '**/*.nupkg' --skip-duplicate -k ${{secrets.DeployToken}}
+    # Deploy packages
+    - name: Deploy packages
+      run: dotnet nuget push '**/*.nupkg' --skip-duplicate -k ${{secrets.DEPLOY_TOKEN}}
