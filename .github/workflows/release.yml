@@ -33,11 +33,11 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
 
-      # Run dotnet build and publish
-      - name: dotnet restore and build
-        run: |
-          dotnet restore
-          dotnet build --configuration Release
+    # Run dotnet build and publish
+    - name: dotnet restore and build
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
 
     # Create packges
     - name: Create packages
